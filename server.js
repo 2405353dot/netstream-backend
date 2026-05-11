@@ -11,12 +11,7 @@ const app = express();
 
 /* ================= CREATE REQUIRED FOLDERS ================= */
 
-const folders = [
-  "uploads",
-  "uploads/videos",
-  "uploads/subtitles",
-  "hls",
-];
+const folders = ["uploads", "uploads/videos", "uploads/subtitles", "hls"];
 
 folders.forEach((folder) => {
   const folderPath = path.join(__dirname, folder);
@@ -31,6 +26,8 @@ folders.forEach((folder) => {
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
+  "https://netstream-frontend.vercel.app",
+  "https://netstream-frontend-kvh9awwzk-ichchhit-s-projects.vercel.app",
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
