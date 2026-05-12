@@ -1,8 +1,7 @@
 const { execFile } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-
-const ffmpegPath = "C:\\ffmpeg-8.1.1-essentials_build\\bin\\ffmpeg.exe";
+const ffmpegPath = require("@ffmpeg-installer/ffmpeg").path;
 
 const normalizePath = (filePath) => {
   return filePath.replace(/\\/g, "/");
